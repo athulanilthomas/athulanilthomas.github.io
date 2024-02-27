@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "label": "Vue.js - The Progressive JavaScript Framework | Vue.js",
+      "url": "https://vuejs.org/"
+    },
+    {
+        "id": 2,
+        "label": "Nuxt: The Intuitive Vue Framework",
+        "url": "https://nuxt.com/"
+    },
+    {
+        "id": 3,
+        "label": "Refactoring.Guru",
+        "url": "https://refactoring.guru/"
+    },
+    {
+        "id": 4,
+        "label": "Nuxt UI: A UI Library for Modern Web Apps",
+        "url": "https://ui.nuxt.com/"
+    }
+]

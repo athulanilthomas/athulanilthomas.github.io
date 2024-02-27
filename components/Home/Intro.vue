@@ -1,32 +1,28 @@
 <template>
   <div class="space-y-6">
-    <NuxtImg src="/avatar.png" alt="Fayaz Ahmed"
+    <NuxtImg src="/avatar.png" alt="Athul Anil"
       class="ring-2 border ring-gray-200 border-gray-300 dark:ring-white/10 dark:border-gray-800 hover:ring-4 transition-all duration-300 bg-gray-200 dark:bg-gray-900 rounded-full h-12 w-12 sm:h-16 sm:w-16"
       sizes="48px sm:64px" placeholder format="webp" />
     <h1 class="text-xl font-bold tracking-tight text-gray-800 dark:text-gray-100">
       Hello!
     </h1>
     <p class="text-gray-900 dark:text-gray-400">
-      I'm Fayaz, I work as a software, product engineer and designer from
-      Bengaluru, India. I specialize in building web applications and sites
-      using Javascript, React, Vue &amp; Node. I've procrastinated building this
-      website for years but finally it's here, I've carved out my own little
-      nook on the internet to share my silly experiments, nifty projects, and
-      thoughts (mostly about tech and design).
+      I am Athul Anil, a software engineer and developer who lives in Kerala, India. 
+      I am passionate about building web applications and sites that are fast, responsive, and elegant. 
+      I use Javascript, Nuxt, Vue &amp; Node as my main technologies for developing web solutions that delight users.
     </p>
     <p class="text-gray-900 dark:text-gray-400">
-      By day, I'm a Fullstack Developer at
-      <a href="https://headshotpro.com" target="_blank" class="underline">Headshotpro</a>, and
-      by night (and weekends), I'm busy tinkering with some random tool or app
-      that I am building.
+      I lead a double life as a Fullstack Developer. 
+      By day, I work at <a href="https://alokin.in/" target="_blank" class="underline">Alokin Software Pvt Ltd</a>, where I create awesome web solutions. 
+      By night (and weekends), I switch to a hobbyist mode and explore random tools and apps that I make on my own.
     </p>
   </div>
 </template>
 
 <script setup>
 useSeoMeta({
-  title: "Fayaz Ahmed",
+  title: "Athul Anil Thomas",
   description:
-    "I'm Fayaz, your friendly neighborhood software, product engineer and designer from Bengaluru, India. I specialize in building web applications and sites using Javascript, React, Vue & Node.",
+    "I'm Athul, your friendly neighborhood software engineer from Kerala, India. I specialize in building web applications and sites using Javascript, Nuxt, Vue & Node.",
 });
 </script>

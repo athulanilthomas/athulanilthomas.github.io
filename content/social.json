@@ -1,0 +1,22 @@
+[
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/AthulAnilThoma2",
+      "icon": "mdi:twitter"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/athulanilthomas",
+      "icon": "mdi:github"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/athul-anil-thomas/",
+      "icon": "mdi:linkedin"
+    },
+    {
+      "name": "Telegram",
+      "url": "https://t.me/memcacher",
+      "icon": "mdi:telegram"
+    }
+  ]

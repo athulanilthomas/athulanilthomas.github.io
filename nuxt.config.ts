@@ -1,5 +1,11 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
   modules: [
     "@nuxt/ui",
     "nuxt-icon",
@@ -29,6 +35,10 @@ export default defineNuxtConfig({
     highlight: {
       theme: "github-dark",
     },
+    ignores: [
+      '/articles/',
+      '/projects/'
+    ]
   },
   googleFonts: {
     display: "swap",

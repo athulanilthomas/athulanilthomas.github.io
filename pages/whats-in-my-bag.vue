@@ -6,19 +6,19 @@
       :description="description"
     />
     <div class="space-y-24">
-      <ul class="space-y-8">
+      <ul v-if="hardware.length" class="space-y-8">
         <AppUsesHeader title="Hardware" />
         <AppUsesItem v-for="(item, id) in hardware" :key="id" :item="item" />
       </ul>
-      <ul class="space-y-8">
+      <ul v-if="software.length" class="space-y-8">
         <AppUsesHeader title="Software" />
         <AppUsesItem v-for="(item, id) in software" :key="id" :item="item" />
       </ul>
-      <ul class="space-y-8">
+      <ul v-if="desk.length" class="space-y-8">
         <AppUsesHeader title="Desk" />
         <AppUsesItem v-for="(item, id) in desk" :key="id" :item="item" />
       </ul>
-      <ul class="space-y-8">
+      <ul v-if="other.length" class="space-y-8">
         <AppUsesHeader title="Other" />
         <AppUsesItem v-for="(item, id) in other" :key="id" :item="item" />
       </ul>
@@ -30,7 +30,7 @@
 const description =
   "Software I use, gadgets I love, and other things I recommend. Here’s a big list of all of my favorite stuff.";
 useSeoMeta({
-  title: "Things I use | Fayaz Ahmed",
+  title: "Things I use | Athul Anil Thomas",
   description,
 });
 const { data: items } = await useAsyncData("uses", () =>

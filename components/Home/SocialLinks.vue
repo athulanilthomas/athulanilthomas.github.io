@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="links?.length">
     <h2 class="uppercase text-xs font-semibold text-gray-400 mb-4">FIND ME ON</h2>
     <div class="space-y-5">
       <NuxtLink
@@ -23,26 +23,8 @@
 </template>
 
 <script lang="ts" setup>
-const links = [
-  {
-    name: "Twitter",
-    url: "https://twitter.com/fayazara",
-    icon: "mdi:twitter",
-  },
-  {
-    name: "GitHub",
-    url: "https://github.com/fayazara",
-    icon: "mdi:github",
-  },
-  {
-    name: "Linkedin",
-    url: "https://www.linkedin.com/in/fayaz-aralikatti/",
-    icon: "mdi:linkedin",
-  },
-  {
-    name: "Telegram",
-    url: "https://t.me/fayazara",
-    icon: "mdi:telegram",
-  },
-];
+const { data: links } = useAsyncData('social-media-links', () => 
+   queryContent<{ body: { name: string, url: string, icon: string }[] }>('/social').findOne(),
+   { transform: (data) => data.body }
+)
 </script>
