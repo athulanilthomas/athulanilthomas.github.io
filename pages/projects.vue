@@ -1,13 +1,16 @@
 <template>
   <main class="min-h-screen">
     <AppHeader class="mb-12" title="Projects" :description="description" />
-    <div class="space-y-4">
+    <div v-if="projects.length" class="space-y-4">
       <AppProjectCard
         v-for="(project, id) in projects"
         :key="id"
         :project="project"
       />
     </div>
+    <UtilEmptyState v-else icon="mdi:database-off-outline">
+      No Projects
+    </UtilEmptyState>
   </main>
 </template>
 
