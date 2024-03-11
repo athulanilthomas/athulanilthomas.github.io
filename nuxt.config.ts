@@ -16,6 +16,14 @@ export default defineNuxtConfig({
     "@nuxthq/studio",
     "@vueuse/nuxt"
   ],
+  experimental: {
+    componentIslands: true
+  },
+  runtimeConfig: {
+    hostUrl: '',
+    spotifyApiSecret: '',
+    spotifyApiClientId: ''
+  },
   ui: {
     icons: ["heroicons", "lucide"],
   },
