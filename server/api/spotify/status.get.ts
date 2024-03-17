@@ -1,13 +1,25 @@
-import type { SpotifyResponse } from '@/types/spotify'
+// Essentials
+import { SpotifyApi as Spotify } from '@spotify/web-api-ts-sdk'
+import { AuthorizationCodeWithPKCEStrategyOnNode } from '@/server/utils/spotify'
+import { VercelKVCachingStrategy } from '~/server/utils/cache'
+import { Scopes } from '~/server/utils/helpers'
 
-export default defineSpotifyReponseHandler(async (event) => {
-    const { spotifyApiSecret } = useRuntimeConfig()
+export default defineLazyEventHandler(() => {
+  const { baseUrl, spotifyClientId } = useRuntimeConfig()
+  const redirectUri = `${baseUrl}/api/spotify/callback`
 
-    const result = await $fetch<SpotifyResponse>('https://api.spotify.com/v1/me/player', {
-      headers: {
-        Authorization: `Bearer ${spotifyApiSecret}`
-      }
-    })
+  const strategy = new AuthorizationCodeWithPKCEStrategyOnNode(
+    spotifyClientId,
+    redirectUri,
+    Scopes
+  )
 
-    return { item: { id: result?.item?.id ?? null } }
+  const sdk = new Spotify(strategy, {
+    cachingStrategy: new VercelKVCachingStrategy()
+  })
+
+  return defineEventHandler(async (event) => {
+    const playbackState = await sdk.player.getCurrentlyPlayingTrack()
+    return { item: { id: playbackState?.item?.id ?? null } }
+  })
 })
