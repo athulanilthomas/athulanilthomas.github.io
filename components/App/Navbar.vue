@@ -63,5 +63,10 @@ const items = [
     path: "/bookmarks",
     icon: "solar:bookmark-linear",
   },
+  {
+    name: "Spotify",
+    path: "/spotify",
+    icon: "solar:music-note-outline",
+  },
 ];
 </script>

@@ -16,6 +16,23 @@ export default defineNuxtConfig({
     "@nuxthq/studio",
     "@vueuse/nuxt"
   ],
+  experimental: {
+    componentIslands: true,
+  },
+  routeRules: {
+    '/**': { prerender: true },
+    '/api/**': { cors: true },
+    '/spotify': { ssr: true },
+  },
+  nitro: {
+    storage: {
+      db: { driver: 'vercelKV' }
+    }
+  },
+  runtimeConfig: {
+    baseUrl: '',
+    spotifyClientId: ''
+  },
   ui: {
     icons: ["heroicons", "lucide"],
   },
