@@ -13,7 +13,7 @@
     </p>
     <p class="text-gray-900 dark:text-gray-400">
       I lead a double life as a Fullstack Developer. 
-      By day, I work at <a href="https://alokin.in/" target="_blank" class="underline">Alokin Software Pvt Ltd</a>, where I create awesome web solutions. 
+      By day, I work at <a href="https://www.capgemini.com/" target="_blank" class="underline">Capgemini</a>, where I create awesome web solutions. 
       By night (and weekends), I switch to a hobbyist mode and explore random tools and apps that I make on my own.
     </p>
   </div>
